@@ -1,0 +1,17 @@
+
+Servant part 2 Release Candidate 1
+
+Names: Akshat Gupta & Byung-Yeob Kim 
+
+0. After calling the Status please wait for the prompt to show (or short-circuit it with Crtl + c) before checking the output file. We are closing the file after we recieve all the messages and so the file will be empty before that.
+
+1. Dropping of bogus delete msg.
+When a node receives a delete message, it computes nonce form the messages's password, and then compare the computed nonce to the message's nonce. Any Delete messages failing this test will be considered bogus and will be dropped by the node and not be forwarded.
+
+2. Observations while testing the grading guidlines
+	
+	 a.> Just to show the progress for command options we have added some visual presentation. We are printing "-----------------" for every response we recieve. If the no. of responses expected are reached it will be safe to Short-circuit it with ctrl + c.
+	 
+	 b.> Please do not stress the system too much :). We have struggled for perfection. However, in a few cases we found when we quickly start all the nodes with intervals of less than 1 sec, some nodes do not get connected as planned. It would be great if there is a delay of 2 sec (or more) between starts of each node.
+	 
+	 c.> Thank you! 
